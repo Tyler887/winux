@@ -30,7 +30,7 @@ function Add-EnvPath {
 Write-Output "Installing WINUX..."
 $WINUX_URL = "https://github.com/Tyler887/winux/releases/latest/download/linux.exe"
 $WINUXUPDATER_URL = "https://raw.githubusercontent.com/Tyler887/winux/main/upgrade.ps1"
-$WINUXUNINSTALLERURL = "https://github.com/Tyler887/winux/raw/main/uninstall.ps1"
+$WINUXUNINSTALLER_URL = "https://github.com/Tyler887/winux/raw/main/uninstall.ps1"
 try {
     New-Item -Path $env:UserProfile"\AppData\Roaming" -Name "Winux" -ItemType "directory"
 } catch {
