@@ -16,5 +16,5 @@ Another way is to use [CPPM](https://github.com/Tyler887/CPPM) or add the [Scoop
 powershell -c "Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')"
 scoop install git
 scoop bucket add winux https://github.com/Tyler887/winux-scoop.git
-scoop install winux/shell
+scoop install winux/core
 ```
