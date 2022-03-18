@@ -1,2 +1,2 @@
-# winux
-The Linux® environment for Windows®
+# Winux
+Winux is a Linux® environment for Windows®.
