@@ -2,7 +2,7 @@
 
 Winux is a Linux® environment for Windows®.
 
-# Install
+## Install
 
 Installation of Winux is usally done using this in PowerShell:
 
