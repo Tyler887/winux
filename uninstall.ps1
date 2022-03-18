@@ -31,3 +31,4 @@ Write-Output "Uninstalling WINUX..."
 Remove-EnvPath $env:UserProfile"\AppData\Roaming\Winux" "User"
 Remove-Item -Path $env:UserProfile"\AppData\Roaming\Winux" -Force -Recurse
 Remove-Item -Path $env:UserProfile"\update-winux.ps1" -Force
+Remove-Item -Path $env:UserProfile"\uninstall-winux.ps1" -Force
