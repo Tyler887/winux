@@ -1,7 +1,3 @@
-if ( Test-Path $env:UserProfile"\AppData\Roaming\Winux" -PathType Leaf ) {
-    Write-Error "Winux is already installed."
-    exit
-}
 function Add-EnvPath {
     param(
         [Parameter(Mandatory=$true)]
@@ -33,7 +29,11 @@ function Add-EnvPath {
 }
 Write-Output "Installing WINUX..."
 $WINUX_URL = "https://github.com/Tyler887/winux/releases/latest/download/linux.exe"
-New-Item -Path $env:UserProfile"\AppData\Roaming" -Name "Winux" -ItemType "directory"
+try {
+    New-Item -Path $env:UserProfile"\AppData\Roaming" -Name "Winux" -ItemType "directory"
+} catch {
+    Write-Error "Winux is already installed."
+}
 Invoke-WebRequest $WINUX_URL -OutFile $env:UserProfile"\AppData\Roaming\Winux\linux.exe"
 Invoke-WebRequest $WINUX_URL -OutFile $env:UserProfile"\AppData\Roaming\Winux\winux.exe"
 Add-EnvPath $env:UserProfile"\AppData\Roaming\Winux" "User"
