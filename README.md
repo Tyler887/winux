@@ -24,3 +24,9 @@ You can uninstall Winux as well:
 ```powershell
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://github.com/Tyler887/winux/raw/main/uninstall.ps1')
 ```
+
+or upgrade it:
+
+```powershell
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://github.com/Tyler887/winux/raw/main/upgrade.ps1')
+```
