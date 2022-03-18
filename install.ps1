@@ -30,6 +30,7 @@ function Add-EnvPath {
 Write-Output "Installing WINUX..."
 $WINUX_URL = "https://github.com/Tyler887/winux/releases/latest/download/linux.exe"
 $WINUXUPDATER_URL = "https://raw.githubusercontent.com/Tyler887/winux/main/upgrade.ps1"
+$WINUXUNINSTALLERURL = "https://github.com/Tyler887/winux/raw/main/uninstall.ps1"
 try {
     New-Item -Path $env:UserProfile"\AppData\Roaming" -Name "Winux" -ItemType "directory"
 } catch {
@@ -39,5 +40,6 @@ try {
 Invoke-WebRequest $WINUX_URL -OutFile $env:UserProfile"\AppData\Roaming\Winux\linux.exe"
 Invoke-WebRequest $WINUX_URL -OutFile $env:UserProfile"\AppData\Roaming\Winux\winux.exe"
 Invoke-WebRequest $WINUXUPDATER_URL -OutFile $env:UserProfile"\update-winux.ps1"
+Invoke-WebRequest $WINUXUNINSTALLER_URL -OutFile $env:UserProfile"\uninstall-winux.ps1"
 Add-EnvPath $env:UserProfile"\AppData\Roaming\Winux" "User"
 Write-Output "WINUX has been installed! To verify, run: linux --version yes"
