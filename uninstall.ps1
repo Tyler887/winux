@@ -29,4 +29,4 @@ function Remove-EnvPath {
 }
 Write-Output "Uninstalling WINUX..."
 Remove-EnvPath $env:UserProfile"\AppData\Roaming\Winux" "User"
-Remove-Item -Path $env:UserProfile"\AppData\Roaming\Winux" -Force
+Remove-Item -Path $env:UserProfile"\AppData\Roaming\Winux" -Force -Recurse
