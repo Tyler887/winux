@@ -19,10 +19,4 @@ scoop bucket add winux https://github.com/Tyler887/winux-scoop.git
 scoop install winux/core
 ```
 
-You can uninstall Winux as well:
-
-```powershell
-Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://github.com/Tyler887/winux/raw/main/uninstall.ps1')
-```
-
-or upgrade it by opening `update-winux.ps1`.
+You can uninstall Winux as well by opening `uninstall-winux.ps1` or upgrade it by opening `update-winux.ps1`.
