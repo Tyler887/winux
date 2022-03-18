@@ -16,7 +16,7 @@ Another way is to use [CPPM](https://github.com/Tyler887/CPPM) or add the [Scoop
 powershell -c "Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://get.scoop.sh')"
 scoop install git
 scoop bucket add winux https://github.com/Tyler887/winux-scoop.git
-scoop install winux/core
+scoop install winux/winux
 ```
 
 You can uninstall Winux as well by opening `uninstall-winux.ps1` or upgrade it by opening `update-winux.ps1`.
