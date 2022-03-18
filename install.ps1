@@ -1,3 +1,7 @@
+if ( Test-Path $env:UserProfile"\AppData\Roaming\Winux" -PathType Leaf ) {
+  Write-Error "Winux is already installed.
+  exit
+}
 function Add-EnvPath {
     param(
         [Parameter(Mandatory=$true)]
