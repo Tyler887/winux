@@ -1,6 +1,6 @@
 # Winux
 
-Winux is a Linux® environment for Windows®.
+Winux is a Linux® environment for Windows<sup>TM</sup>.
 
 ## Install
 
