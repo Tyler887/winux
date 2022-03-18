@@ -38,6 +38,6 @@ try {
 }
 Invoke-WebRequest $WINUX_URL -OutFile $env:UserProfile"\AppData\Roaming\Winux\linux.exe"
 Invoke-WebRequest $WINUX_URL -OutFile $env:UserProfile"\AppData\Roaming\Winux\winux.exe"
-Invoke-WebRequest $WINUXUPDATER_URL -OutFile $env:UserProfile
+Invoke-WebRequest $WINUXUPDATER_URL -OutFile $env:UserProfile"\update-winux.ps1"
 Add-EnvPath $env:UserProfile"\AppData\Roaming\Winux" "User"
 Write-Output "WINUX has been installed! To verify, run: linux --version yes"
