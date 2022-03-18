@@ -1,5 +1,5 @@
 Write-Output "Installing WINUX..."
-Invoke-WebRequest "https://github.com/Tyler887/winux/releases/latest/download/linux.exe" -OutFile $env:UserProfile"\AppData\Roaming\Winux\linux.exe"
+Invoke-WebRequest "https://github.com/Tyler887/winux/releases/download/v1.0/linux.exe" -OutFile $env:UserProfile"\AppData\Roaming\Winux\linux.exe"
 [Environment]::SetEnvironmentVariable
      ("PATH", "$env:PATH;$env:UserProfile\AppData\Roaming\Winux", [System.EnvironmentVariableTarget]::User)
 Write-Output "WINUX has been installed! To verify, run: linux --version yes"
