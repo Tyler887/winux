@@ -27,8 +27,11 @@ function Add-EnvPath {
         $env:Path = $envPaths -join ';'
     }
 }
+
+If ( Test-Path $env:UserProfile"\AppData\Roaming\Winux" ) {
+   Write-Error "A folder called 'Winux' in your AppData roaming subfolder seems to exist. Please delete it." -ErrorAction Stop
 if ( Get-Command linux -ErrorAction SilentlyContinue ) {
-   Write-Warning "WINUX is already installed, or another program conflicts with the 'linux' command. Please uninstall it before installing." -WarningAction Inquire
+   Write-Warning "WINUX is already installed, or another program conflicts with the 'linux' command. Please delete any`nfiles in a folder added to the PATH called 'linux.exe' before installing." -WarningAction Inquire
 }
 Write-Output "Installing WINUX..."
 $WINUX_URL = "https://github.com/Tyler887/winux/releases/latest/download/linux.exe"
