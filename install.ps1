@@ -34,6 +34,9 @@ If ( Test-Path $env:UserProfile"\AppData\Roaming\Winux" ) {
 if ( Get-Command linux -ErrorAction SilentlyContinue ) {
    Write-Warning "Another program conflicts with the 'linux' command. Please delete any files in a folder added to the PATH called 'linux.exe' before installing." -WarningAction Inquire
 }
+if ( Get-Command winux -ErrorAction SilentlyContinue ) {
+   Write-Warning "Another program conflicts with the 'winux' command. Please delete any files in a folder added to the PATH called 'linux.exe' before installing." -WarningAction Inquire
+}
 
 Write-Output "Installing WINUX..."
 $WINUX_URL = "https://github.com/Tyler887/winux/releases/latest/download/linux.exe"
