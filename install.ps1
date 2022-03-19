@@ -45,8 +45,7 @@ Function Test-CommandExists
 
 } #end function test-CommandExists
 if ( Test-CommandExists "linux" -eq "linux exists" ) {
-   Write-Error "WINUX is already installed."
-   exit
+   Write-Warning "WINUX is already installed. A conflict may appear."
 }
 Write-Output "Installing WINUX..."
 $WINUX_URL = "https://github.com/Tyler887/winux/releases/latest/download/linux.exe"
