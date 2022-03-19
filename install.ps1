@@ -28,7 +28,7 @@ function Add-EnvPath {
     }
 }
 if ( Get-Command linux -ErrorAction SilentlyContinue ) {
-   Write-Warning "WINUX is already installed, or another program conflicts with the 'linux' command." -WarningAction Inquire
+   Write-Warning "WINUX is already installed, or another program conflicts with the 'linux' command. Please uninstall it before installing.`nA shell may help you. Use 'Remove-Item' to remove a file or directory, 'exit' to continue with installation." -WarningAction Suspend
 }
 Write-Output "Installing WINUX..."
 $WINUX_URL = "https://github.com/Tyler887/winux/releases/latest/download/linux.exe"
