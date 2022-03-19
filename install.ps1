@@ -27,8 +27,8 @@ function Add-EnvPath {
         $env:Path = $envPaths -join ';'
     }
 }
-if ( Get-Command "linux" ) {
-   Write-Warning "WINUX is already installed. A conflict may appear."
+if ( Get-Command linux -ErrorAction SilentlyContinue ) {
+   Write-Error "WINUX is already installed." -ErrorAction Abort
 }
 Write-Output "Installing WINUX..."
 $WINUX_URL = "https://github.com/Tyler887/winux/releases/latest/download/linux.exe"
