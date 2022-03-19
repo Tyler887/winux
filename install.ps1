@@ -35,7 +35,7 @@ if ( Get-Command linux -ErrorAction SilentlyContinue ) {
    Write-Warning "Another program conflicts with the 'linux' command. Please delete any files in a folder added to the PATH called 'linux.exe' before installing." -WarningAction Inquire
 }
 if ( Get-Command winux -ErrorAction SilentlyContinue ) {
-   Write-Warning "Another program conflicts with the 'winux' command. Please delete any files in a folder added to the PATH called 'linux.exe' before installing." -WarningAction Inquire
+   Write-Warning "Another program conflicts with the 'winux' command. Please delete any files in a folder added to the PATH called 'winux.exe' before installing." -WarningAction Inquire
 }
 
 Write-Output "Installing WINUX..."
