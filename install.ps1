@@ -27,16 +27,32 @@ function Add-EnvPath {
         $env:Path = $envPaths -join ';'
     }
 }
+Function Test-CommandExists
+
+{
+
+ Param ($command)
+
+ $oldPreference = $ErrorActionPreference
+
+ $ErrorActionPreference = ‘stop’
+
+ try {if(Get-Command $command){“$command exists”}}
+
+ Catch {“$command does not exist”}
+
+ Finally {$ErrorActionPreference=$oldPreference}
+
+} #end function test-CommandExists
+if ( Test-CommandExists "linux" -eq "linux exists" ) {
+   Write-Error "WINUX is already installed."
+   exit
+}
 Write-Output "Installing WINUX..."
 $WINUX_URL = "https://github.com/Tyler887/winux/releases/latest/download/linux.exe"
 $WINUXUPDATER_URL = "https://raw.githubusercontent.com/Tyler887/winux/main/upgrade.ps1"
 $WINUXUNINSTALLER_URL = "https://github.com/Tyler887/winux/raw/main/uninstall.ps1"
-try {
-    New-Item -Path $env:UserProfile"\AppData\Roaming" -Name "Winux" -ItemType "directory"
-} catch {
-    Write-Error "Winux is already installed."
-    exit
-}
+New-Item -Path $env:UserProfile"\AppData\Roaming" -Name "Winux" -ItemType "directory"
 Invoke-WebRequest $WINUX_URL -OutFile $env:UserProfile"\AppData\Roaming\Winux\linux.exe"
 Invoke-WebRequest $WINUX_URL -OutFile $env:UserProfile"\AppData\Roaming\Winux\winux.exe"
 Invoke-WebRequest $WINUXUPDATER_URL -OutFile $env:UserProfile"\update-winux.ps1"
