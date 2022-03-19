@@ -23,4 +23,4 @@ You can uninstall Winux as well by opening `uninstall-winux.ps1` or upgrade it b
 
 ### :warning: Misidentification of being a Win32 trojan
 
-Winux might be detected as a virus, called `Trojan:Win32/Wactac.b!ml`. If this appears in Windows Security, then uninstall Winux, then try installing it again. If you still find the same issue, install using Scoop.
+Winux might be detected as a virus, called `Trojan:Win32/Wactac.b!ml`. If this appears in Windows Security, then uninstall Winux, and try installing it again. If you still find the same issue, install using Scoop.
