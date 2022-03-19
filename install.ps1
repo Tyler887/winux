@@ -27,24 +27,7 @@ function Add-EnvPath {
         $env:Path = $envPaths -join ';'
     }
 }
-Function Test-CommandExists
-
-{
-
- Param ($command)
-
- $oldPreference = $ErrorActionPreference
-
- $ErrorActionPreference = ‘stop’
-
- try {if(Get-Command $command){“$command exists”}}
-
- Catch {“$command does not exist”}
-
- Finally {$ErrorActionPreference=$oldPreference}
-
-} #end function test-CommandExists
-if ( Test-CommandExists "linux" -eq "linux exists" ) {
+if ( Get-Command "linux" ) {
    Write-Warning "WINUX is already installed. A conflict may appear."
 }
 Write-Output "Installing WINUX..."
