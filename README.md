@@ -1,4 +1,4 @@
-# Winux
+# Winux (`linux.exe`)
 
 Winux is a Linux® environment for Windows<sup>TM</sup>.
 
