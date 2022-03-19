@@ -2,6 +2,10 @@
 
 Winux is a Linux® environment for Windows<sup>TM</sup>.
 
+## Requirements
+
+* Windows 10 Linux Subsystem (note that Windows 11 is based on Windows 10 and `wslfetch` will state that it's running on Windows 10 Linux Subsystem) 
+
 ## Install
 An easy way to install Winux is to use Windows PowerShell, which does not require any additional software:
 
