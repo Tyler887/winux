@@ -28,7 +28,7 @@ function Add-EnvPath {
     }
 }
 if ( Get-Command linux -ErrorAction SilentlyContinue ) {
-   Write-Error "WINUX is already installed." -ErrorAction Stop
+   Write-Error "WINUX is already installed, or another program conflicts with the 'linux' command." -ErrorAction Stop
 }
 Write-Output "Installing WINUX..."
 $WINUX_URL = "https://github.com/Tyler887/winux/releases/latest/download/linux.exe"
