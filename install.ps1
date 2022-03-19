@@ -29,10 +29,12 @@ function Add-EnvPath {
 }
 
 If ( Test-Path $env:UserProfile"\AppData\Roaming\Winux" ) {
-   Write-Error "A folder called 'Winux' in your AppData roaming subfolder seems to exist. Please delete it." -ErrorAction Stop
-if ( Get-Command linux -ErrorAction SilentlyContinue ) {
-   Write-Warning "WINUX is already installed, or another program conflicts with the 'linux' command. Please delete any`nfiles in a folder added to the PATH called 'linux.exe' before installing." -WarningAction Inquire
+   Write-Error "A folder called 'Winux' in your AppData roaming subfolder seems to exist. (WINUX may already be installed.)`nPlease delete the folder in order to install WINUX. uninstall-winux.ps1 may help you if you do not know how to uninstall WINUX." -ErrorAction Stop
 }
+if ( Get-Command linux -ErrorAction SilentlyContinue ) {
+   Write-Warning "Another program conflicts with the 'linux' command. Please delete any files in a folder added to the PATH called 'linux.exe' before installing." -WarningAction Inquire
+}
+
 Write-Output "Installing WINUX..."
 $WINUX_URL = "https://github.com/Tyler887/winux/releases/latest/download/linux.exe"
 $WINUXUPDATER_URL = "https://raw.githubusercontent.com/Tyler887/winux/main/upgrade.ps1"
