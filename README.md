@@ -3,8 +3,7 @@
 Winux is a Linux® environment for Windows<sup>TM</sup>.
 
 ## Install
-
-Installation of Winux is usally done using this in PowerShell:
+An easy way to install Winux is to use Windows PowerShell, which does not require any additional software:
 
 ```powershell
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://github.com/Tyler887/winux/raw/main/install.ps1')
