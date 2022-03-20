@@ -1,3 +1,14 @@
+$title = "Warning"
+$message = "You're about to uninstall Winux. This will DELETE the linux command, the winux command, the update script, and`nthis script itself. Any running Winux shells will crash and stop working. Are you sure?"
+
+$yes = New-Object System.Management.Automation.Host.ChoiceDescription "&Yes", "Proceed with uninstallation"
+$no = New-Object System.Management.Automation.Host.ChoiceDescription "&No", "Keep Winux"
+
+$options = [System.Management.Automation.Host.ChoiceDescription[]]($yes, $no)
+
+$result = $host.ui.PromptForChoice($title, $message, $Options, 0)
+
+if $result -eq 1 ( return }
 $WinuxIsRunning = Get-Process linux -ErrorAction SilentlyContinue
 $WinuxStubIsRunning = Get-Process winux -ErrorAction SilentlyContinue
 
