@@ -1,4 +1,4 @@
-if ( ! Get-Command "python3" -ErrorAction SilentlyContinue ) {
+if ( Get-Command "python3" -ErrorAction SilentlyContinue ) {} else {
    Write-Error "Python 3 is required to run live." -ErrorAction Stop
 }
 Invoke-WebRequest "https://raw.githubusercontent.com/Tyler887/winux/v1.0/winux.py" -OutFile $env:UserProfile"\WinuxScript.py"
