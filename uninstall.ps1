@@ -1,3 +1,6 @@
+$WinuxIsRunning = Get-Process linux -ErrorAction SilentlyContinue
+$WinuxStubIsRunning = Get-Process winux -ErrorAction SilentlyContinue
+
 function Remove-EnvPath {
     param(
         [Parameter(Mandatory=$true)]
@@ -28,8 +31,8 @@ function Remove-EnvPath {
     }
 }
 Write-Output "Stopping all Winux shells to prevent an error..."
-Stop-Process -Name "linux"
-Stop-Process -Name "winux"
+if ( $WinuxIsRunning ) { Stop-Process -Name "linux" }
+if ( $WinuxStubIsRunning ) { Stop-Process -Name "winux" }
 Write-Output "Uninstalling WINUX..."
 Remove-EnvPath $env:UserProfile"\AppData\Roaming\Winux" "User"
 Remove-Item -Path $env:UserProfile"\AppData\Roaming\Winux" -Force -Recurse
