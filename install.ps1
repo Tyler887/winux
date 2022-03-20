@@ -38,18 +38,19 @@ if ( Get-Command winux -ErrorAction SilentlyContinue ) {
    Write-Warning "Another program conflicts with the 'winux' command. Please delete any files in a folder added to the PATH called 'winux.exe' before installing." -WarningAction Inquire
 }
 
-Write-Output "Installing WINUX..."
+Write-Host "Installing WINUX..."
 $WINUX_URL = "https://github.com/Tyler887/winux/releases/latest/download/linux.exe"
 $WINUXUPDATER_URL = "https://raw.githubusercontent.com/Tyler887/winux/main/upgrade.ps1"
 $WINUXUNINSTALLER_URL = "https://github.com/Tyler887/winux/raw/main/uninstall.ps1"
 New-Item -Path $env:UserProfile"\AppData\Roaming" -Name "Winux" -ItemType "directory"
-Write-Output "Downloading WINUX..."
+Write-Host "Downloading WINUX..."
 Invoke-WebRequest $WINUX_URL -OutFile $env:UserProfile"\AppData\Roaming\Winux\linux.exe"
-Write-Output "Downloading WINUX again to create the 'winux' command as an alias to 'linux'..."
+Write-Host "Downloading WINUX again to create the 'winux' command as an alias to 'linux'..."
 Invoke-WebRequest $WINUX_URL -OutFile $env:UserProfile"\AppData\Roaming\Winux\winux.exe"
-Write-Output "Downloading update script..."
+Write-Host "Downloading update script..."
 Invoke-WebRequest $WINUXUPDATER_URL -OutFile $env:UserProfile"\update-winux.ps1"
-Write-Output "Downloading uninstall script..."
+Write-Host "Downloading uninstall script..."
 Invoke-WebRequest $WINUXUNINSTALLER_URL -OutFile $env:UserProfile"\uninstall-winux.ps1"
 Add-EnvPath $env:UserProfile"\AppData\Roaming\Winux" "User"
-Write-Output "WINUX has been installed! To verify, run: linux --version yes"
+Write-Host "WINUX has been installed! " -f Green -NoNewline
+Write-Host "To verify, run: linux --version yes"
