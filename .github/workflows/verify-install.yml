@@ -11,6 +11,6 @@ jobs:
     runs-on: windows-latest
     steps:
       - run: Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://github.com/Tyler887/winux/raw/main/install.ps1')
-      - run: linux --version yes
+      - run: C:\Users\runneradmin\AppData\Roaming\Winux\linux.exe --version yes
         shell: cmd
       - run: Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://github.com/Tyler887/winux/raw/main/uninstall.ps1')
