@@ -47,7 +47,7 @@ This downloads and runs the code of Winux using CPython.
 
 ## Python 2 support
 
-No.
+[No](https://python.org/doc/sunset-python-2).
 
 ## BASH examples
 
