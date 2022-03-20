@@ -5,7 +5,7 @@ Winux is a Linux® environment for Windows<sup>TM</sup>.
 I'm tired of VMs, because they are really slow. I'm also stuck on Windows and can't get those Unix
 programs. Well, I got sick of it and made this Linux backwards compatibility frontend for Windows.
 
-[![Demo (click for a more clear view](18-27-41.gif)](https://raw.githubusercontent.com/Tyler887/winux/main/18-27-41.gif)
+[![Demo (click for a more clear view)](18-27-41.gif)](https://raw.githubusercontent.com/Tyler887/winux/main/18-27-41.gif)
 
 ## Requirements
 
