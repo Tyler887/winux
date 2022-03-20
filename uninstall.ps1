@@ -27,6 +27,9 @@ function Remove-EnvPath {
         $env:Path = $envPaths -join ';'
     }
 }
+Write-Output "Stopping all Winux shells to prevent an error..."
+Stop-Process -Name "linux"
+Stop-Process -Name "winux"
 Write-Output "Uninstalling WINUX..."
 Remove-EnvPath $env:UserProfile"\AppData\Roaming\Winux" "User"
 Remove-Item -Path $env:UserProfile"\AppData\Roaming\Winux" -Force -Recurse
