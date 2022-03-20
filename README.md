@@ -2,6 +2,11 @@
 
 Winux is a Linux® environment for Windows<sup>TM</sup>.
 
+I'm tired of VMs, because they are really slow. I'm also stuck on Windows and can't get those Unix
+programs. Well, I got sick of it and made this Linux backwards compatibility frontend for Windows.
+
+![Demo](18-27-41.gif)
+
 ## Requirements
 
 * Windows 10 Linux Subsystem (note that Windows 11 is based on Windows 10 and `wslfetch` will state that it's running on Windows 10 Linux Subsystem) 
