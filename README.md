@@ -36,10 +36,11 @@ and try installing it again. If you still find the same issue, install using Sco
 
 ### Install APT packages
 
-*:warning: Only works in standalone Bash*
+*:warning: Only works in standalone Bash. When you hit `bash`, ensure you're in sudomode.*
 
 ```bash
 sudomode # enter sudomode
+bash # in sudomode
 apt update # in sudomode
 apt install git python ruby golang make # in sudomode
 go version # without sudomode
