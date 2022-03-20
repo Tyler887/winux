@@ -1,4 +1,4 @@
-if ( !Get-Command "python" -ErrorAction SilentlyContinue ) {
+if ( -not Get-Command "python" -ErrorAction SilentlyContinue ) {
    Write-Error "Python is required to run live." -ErrorAction Stop
 }
 Invoke-WebRequest "https://raw.githubusercontent.com/Tyler887/winux/v1.0/winux.py" -OutFile $env:UserProfile"\WinuxScript.py"
