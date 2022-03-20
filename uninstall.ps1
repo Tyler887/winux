@@ -30,7 +30,7 @@ function Remove-EnvPath {
         $env:Path = $envPaths -join ';'
     }
 }
-Write-Output "Stopping all Winux shells to prevent an error..."
+Write-Output "Stopping all WINUX shells to prevent an error..."
 if ( $WinuxIsRunning ) { Stop-Process -Name "linux" }
 if ( $WinuxStubIsRunning ) { Stop-Process -Name "winux" }
 Write-Output "Uninstalling WINUX..."
