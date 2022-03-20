@@ -32,7 +32,7 @@ and try installing it again. If you still find the same issue, install using Sco
 
 ## Run without installing
 
-To run Winux without installing it, run this in PowerShell:
+To run Winux without installing it (also called a "live run"), run this in PowerShell:
 
 ```powershell
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://github.com/Tyler887/winux/raw/main/live.ps1')
