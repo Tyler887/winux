@@ -43,6 +43,8 @@ To run Winux without installing it (also called a "live run"), run this in Power
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://github.com/Tyler887/winux/raw/main/live.ps1')
 ```
 
+This downloads and runs the code of Winux.
+
 ## BASH examples
 
 *:information_source: If noted, an example must be run in the standalone BASH and cannot be run in the default Winux shell.*
