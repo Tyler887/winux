@@ -8,7 +8,7 @@ Winux is a Linux® environment for Windows<sup>TM</sup>.
 
 ## Install
 
-An easy way to install Winux is to use Windows PowerShell, which does not require any additional software:
+An easy way to install Winux is to use PowerShell, which does not require any additional software:
 
 ```powershell
 Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://github.com/Tyler887/winux/raw/main/install.ps1')
@@ -29,6 +29,14 @@ You can uninstall Winux as well by opening `uninstall-winux.ps1` or upgrade it b
 
 Winux might be detected as a virus, called Wactac (`Trojan:Win32/Wactac.B!ml`). If this appears in Windows Security, then uninstall Winux,
 and try installing it again. If you still find the same issue, install using Scoop.
+
+## Run without installing
+
+To run Winux without installing it, run this in PowerShell:
+
+```powershell
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://github.com/Tyler887/winux/raw/main/live.ps1')
+```
 
 ## BASH examples
 
