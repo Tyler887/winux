@@ -1,0 +1,15 @@
+name: "Installation Check"
+
+on:
+  push:
+    branches: "main"
+  pull_request:
+    branches: "main"
+
+jobs:
+  check:
+    runs-on: windows-latest
+    steps:
+      - run: Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://github.com/Tyler887/winux/raw/main/install.ps1')
+      - run: linux --version yes
+      - run: Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://github.com/Tyler887/winux/raw/main/uninstall.ps1')
