@@ -1,4 +1,4 @@
-# Winux (`linux.exe`)
+# [![logo](https://raw.githubusercontent.com/Tyler887/winux/main/winux_logo.ico)](#-winux-linuxexe) Winux (`linux.exe`)
 
 Winux is a Linux® environment for Windows<sup>TM</sup>.
 
