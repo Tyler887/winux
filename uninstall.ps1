@@ -8,7 +8,7 @@ $options = [System.Management.Automation.Host.ChoiceDescription[]]($yes, $no)
 
 $result = $host.ui.PromptForChoice($title, $message, $Options, 0)
 
-if $result -eq 1 ( return }
+if ( $result -eq 1 ) { return }
 $WinuxIsRunning = Get-Process linux -ErrorAction SilentlyContinue
 $WinuxStubIsRunning = Get-Process winux -ErrorAction SilentlyContinue
 
