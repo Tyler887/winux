@@ -52,5 +52,6 @@ Invoke-WebRequest $WINUXUPDATER_URL -OutFile $env:UserProfile"\update-winux.ps1"
 Write-Host "Downloading uninstall script..."
 Invoke-WebRequest $WINUXUNINSTALLER_URL -OutFile $env:UserProfile"\uninstall-winux.ps1"
 Add-EnvPath $env:UserProfile"\AppData\Roaming\Winux" "User"
+Invoke-Expression "refreshenv"
 Write-Host "WINUX has been installed! " -f Green -NoNewline
 Write-Host "To verify, run: linux --version yes"
