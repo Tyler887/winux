@@ -70,3 +70,6 @@ python --version # without sudomode
 ruby --version # without sudomode
 git version # without sudomode
 ```
+
+## RISK WARRANTY
+**Use Winux at your own risk. I make no warranty for usage of the frontend. Do not use this program unless you understand the risks of using it.**
