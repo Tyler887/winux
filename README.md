@@ -38,7 +38,7 @@ python -m pip install pyinstaller # Install pyinstaller from Package Index
 python -m pip install colorama questionary # Winux depends on both of these modules
 git clone https://github.com/Tyler887/winux.git
 Set-Location winux
-pyinstaller winux.py
+pyinstaller winux.py --console --onefile #--noupx # Uncomment the --noupx if you don't have UPX
 ```
 
 ### :warning: Misidentification of being a Win32 trojan
