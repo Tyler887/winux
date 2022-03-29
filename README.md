@@ -30,6 +30,17 @@ scoop install winux/winux
 
 You can uninstall Winux as well by opening `uninstall-winux.ps1` or upgrade it by opening `update-winux.ps1`.
 
+### Compile from source
+It's easy to compile the source code as a Windows binary, like this:
+
+```powershell
+python -m pip install pyinstaller # Install pyinstaller from Package Index
+python -m pip install colorama questionary # Winux depends on both of these modules
+git clone https://github.com/Tyler887/winux.git
+Set-Location winux
+pyinstaller winux.py
+```
+
 ### :warning: Misidentification of being a Win32 trojan
 
 Winux might be detected as a virus, called Wactac (`Trojan:Win32/Wactac.B!ml`). If this appears in Windows Security, then uninstall Winux,
