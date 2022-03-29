@@ -50,7 +50,8 @@ preform a live run.
 
 ## Python 2 support
 
-[No](https://python.org/doc/sunset-python-2).
+[No](https://python.org/doc/sunset-python-2). Over 1k of Python software dropped support for Python 2. Winux is written in Python 3, long since Python 2 was
+discontinued. Pull requests adding Python 2 support will be closed and won't be merged.
 
 ## BASH examples
 
