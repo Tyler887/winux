@@ -31,7 +31,7 @@ scoop install winux/winux
 You can uninstall Winux as well by opening `uninstall-winux.ps1` or upgrade it by opening `update-winux.ps1`.
 
 ### Compile from source
-It's easy to compile the source code as a Windows binary, like this (in `powershell` or `pwsh`):
+It's easy to compile the source code as a Windows binary, like this (in `powershell`/`pwsh`):
 
 ```powershell
 python -m pip install pyinstaller # Install pyinstaller from Package Index
