@@ -30,6 +30,11 @@ scoop install winux/winux
 
 You can uninstall Winux as well by opening `uninstall-winux.ps1` or upgrade it by opening `update-winux.ps1`.
 
+If Winux is installed, it can be registered as a `dotnet` command:
+```powershell
+Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://github.com/Tyler887/winux/raw/main/dotnet-register.ps1')
+```
+
 ### Compile from source
 It's easy to compile the source code as a Windows binary, like this (in `powershell`/`pwsh`):
 
