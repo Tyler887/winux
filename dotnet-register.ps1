@@ -1,4 +1,4 @@
-if { Test-Path "$env:userprofile\AppData\Roaming\Winux" } {} else {
+if ( Test-Path "$env:userprofile\AppData\Roaming\Winux" ) {} else {
   Write-Host "Error:" -NoNewline -f red
   Write-Host " You need to install Winux before running this .NET registration script."
   return
