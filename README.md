@@ -69,24 +69,5 @@ preform a live run.
 [No](https://python.org/doc/sunset-python-2). Over 1k of Python software dropped support for Python 2. Winux is written in Python 3, long since Python 2 was
 discontinued. Pull requests adding Python 2 support will be closed and won't be merged.
 
-## BASH examples
-
-*:information_source: If noted, an example must be run in the standalone BASH and cannot be run in the default Winux shell.*
-
-### Install APT packages
-
-*:warning: Only works in standalone Bash. When you hit `bash`, ensure you're in sudomode.*
-
-```bash
-sudomode # enter sudomode
-bash # in sudomode
-apt update # in sudomode
-apt install git python ruby golang make # in sudomode
-go version # without sudomode
-python --version # without sudomode
-ruby --version # without sudomode
-git version # without sudomode
-```
-
 ## RISK WARRANTY
 **Use Winux at your own risk. I make no warranty for usage of the frontend. Do not use this program unless you understand the risks of using it.**
