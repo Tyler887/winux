@@ -66,7 +66,7 @@ Invoke-Expression (New-Object System.Net.WebClient).DownloadString('https://gith
 This downloads and runs the code of Winux using CPython.
 
 Live run should be used to prevent Windows Security from detecting Winux as a virus. CPython (the reference Python implementation) must be installed in order to
-preform a live run.
+preform a live run. (Note that if you do not have Python, `python` will take you to the Python 3.9 download page on MS Store.)
 
 ## Python 2 support
 
