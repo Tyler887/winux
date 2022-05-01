@@ -11,6 +11,7 @@ programs. Well, I got sick of it and made this Linux backwards compatibility fro
 ## Requirements
 
 You need **Windows 10** or **Windows 11** to use Winux as WSL only appears in these versions of Windows.
+Please note that Winux is only tested on Windows 11, but should work on Windows 10 as well.
 
 To setup WSL, if you have one of these versions, run `wsl --install --distribution <initial distro name>`.
 To see a list of distro names, run `wsl --list --online`.
